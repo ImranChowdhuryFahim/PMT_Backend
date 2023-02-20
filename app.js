@@ -39,7 +39,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/',(req,res)=>res.send(hello))
+app.use('/',(req,res)=>res.send("hello"))
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs));
 app.use(userRouter);
 app.use(workspaceRouter);
